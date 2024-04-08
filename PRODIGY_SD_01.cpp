@@ -5,7 +5,7 @@ void main_menu()
 {
     cout<<endl<<"\t\t----------------------- WELCOME TO TEMPERATURE CONVERTER ----------------------------"<<endl<<endl;
 
-    cout<<"\tNOTE -> (a) THIS PROGRAM WORKS ON CELSIUS , FAHRENHIET AND KELVIN . "<<endl;
+    cout<<"\tNOTE -> (a) THIS PROGRAM WORKS ON CELSIUS , FAHRENHEIT AND KELVIN . "<<endl;
     cout<<"\t\t(b) ENTER ANY OF THESE UNITS . "<<endl<<endl;
 
     cout<<"ENTER NUMBER OF DEGREE  : ";
@@ -35,13 +35,17 @@ void main_menu()
         cout<<endl<< "celsius is : " << unit1 << endl<<endl;
         cout<<"kelvin is : "<<unit2<<endl<<endl;
     }
-    else
+    else if( unit == "KELVIN" || unit == "kelvin" ) 
     {
         unit1 = degree - 273.15;
         unit2 = (degree - 273.15) * 1.8 + 32;
         cout <<endl<< "celsius is : " << unit1 << endl<<endl;
         cout<<"fahrenheit is : "<<unit2<<endl<<endl;
     }
+    else
+    {
+        cout<<endl<<endl<<"\t-> INVALID CHOICE :( "<<endl<<endl;  
+    }   
 
 }
 
